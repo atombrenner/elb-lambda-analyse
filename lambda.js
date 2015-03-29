@@ -9,7 +9,7 @@ AWS.config.region = "eu-west-1";
 
 function parseLog(log) {
   function parseLine(line) {
-    // format of a line
+    // format of a line, see http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/access-log-collection.html
     // 0         1   2           3            4                       5                       6                        7               8                   9              10         11
     // timestamp elb client:port backend:port request_processing_time backend_processing_time response_processing_time elb_status_code backend_status_code received_bytes sent_bytes "request"
     var parts = line.split("\"");
